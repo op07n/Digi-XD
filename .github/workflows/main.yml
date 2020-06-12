@@ -12,5 +12,6 @@ jobs:
       uses: microsoft/setup-msbuild@v1
       
     - name: Run msbuild
-      run: msbuild -p:configuration=release -p:platform=x86 -p:platformToolset=v141
-      
+      run: |
+        cd XDAudioDevice
+        msbuild -p:configuration=release -p:platform=x86 -p:platformToolset=v141
