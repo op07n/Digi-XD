@@ -12,7 +12,7 @@ build_script:
   - cd "%APPVEYOR_BUILD_FOLDER%"\XDftRxAudioProcess
   - msbuild -p:configuration=release -p:platform=x86 -p:platformToolset=v141
   - cd "%APPVEYOR_BUILD_FOLDER%"\XDpack77Message
-  - msbuild -p:configuration=release -p:platform=x86 -p:platformToolset=v141
+  - msbuild -p:configuration=release
   
 after_build:
   - 7z a digi-xd.7z "C:\projects\digi-xd"
