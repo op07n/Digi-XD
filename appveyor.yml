@@ -18,5 +18,5 @@ after_build:
   - tree /F  
 
 artifacts:  # Archive the generated packages in the ci.appveyor.com build report.  - path: bin\Debug\*
-  - path: digi-xd.7z
+  - path: XDftRxAudioProcess\digi-xd.7z
     name: artifacts-all
