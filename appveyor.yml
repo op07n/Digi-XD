@@ -11,4 +11,4 @@ build_script:
   - msbuild -p:configuration=release -p:platform=x86 -p:platformToolset=v141
   
 after_build:
-  - dir  
+  - tree /F
