@@ -1,0 +1,16 @@
+name: Release CI
+on: push
+jobs:
+
+  x86_build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1
+      
+    - name: Run msbuild
+      run: msbuild -p:configuration=release -p:platform=x86 -p:platformToolset=v141
+      
