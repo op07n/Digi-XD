@@ -1,0 +1,14 @@
+image: Visual Studio 2019
+
+platform:
+  - x86
+
+configuration:
+  - Release
+
+build_script:
+  - cd "%APPVEYOR_BUILD_FOLDER%"\XDAudioDevice
+  - msbuild -p:configuration=release -p:platform=x86 -p:platformToolset=v141
+  
+after_build:
+  - dir  
